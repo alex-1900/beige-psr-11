@@ -29,7 +29,7 @@ class Container implements ContainerInterface, ArrayAccess
      * 
      * @var array
      */
-    private $entries;
+    private $entries = [];
 
     /**
      * Definition collection.
@@ -55,7 +55,7 @@ class Container implements ContainerInterface, ArrayAccess
         $this->entries = [
             static::class => $this,
             ContainerInterface::class => $this
-        ];
+        ] + $this->entries;
     }
 
     /**

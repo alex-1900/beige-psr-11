@@ -95,6 +95,18 @@ class ContainerTest extends AbstractTest
     /**
      * @expectedException \InvalidArgumentException
      */
+    public function testSetTypeException()
+    {
+        /** @var DefinitionCollectionInterface $dc */
+        $dc = $this->createMock(DefinitionCollectionInterface::class);
+        $instance = new Container([], $dc);
+
+        $instance[1] = 1;
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
     public function testHasTypeException()
     {
         /** @var DefinitionCollectionInterface $dc */
