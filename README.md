@@ -72,4 +72,6 @@ $definitionCollection['foo'] = function($num1, $num2) {
 $container = new Container([], $definitionCollection);
 $container->make('foo', [1, 2]);  // 3
 ```
-`Beige\Psr11\Container::make` 方法的第一个参数是 Definition 的索引 _（注意：不是容器数据的索引）_；第二个参数是一个数组，是传给 Definition 的参数列表。 用 make 方法生成的数据会直接返回，且不会保存在容器中，也就是说，每调用一次 make 方法，都会重新生成一遍数据！
+`Beige\Psr11\Container::make` 方法的第一个参数是 Definition 的索引 _（注意：不是容器数据的索引）_；第二个参数是一个数组，是传给 Definition 的参数列表。 用 make 方法生成的数据会直接返回，且不会保存在容器中，也就是说，每调用一次 make 方法，都会重新生成一次数据！
+
+使用 Definition 可以在需要时才生成数据，省却了不必要的消耗。推荐使用者将初始化消耗较大的数据转化为 Definition.
