@@ -1,6 +1,7 @@
 {
     "name": "beige/psr-11",
     "description": "The container implementation of PSR-11.",
+    "keywords": ["container", "psr11", "psr-11"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,5 +21,7 @@
         "psr-4": {
             "Beige\\Psr11\\": "src"
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
