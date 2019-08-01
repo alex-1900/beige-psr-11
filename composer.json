@@ -1,0 +1,24 @@
+{
+    "name": "beige/psr-11",
+    "description": "The container implementation of PSR-11.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Speed Sonic",
+            "email": "blldxt@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.5.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Beige\\Psr11\\": "src"
+        }
+    }
+}
